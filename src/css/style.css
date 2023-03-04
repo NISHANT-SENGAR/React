@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@400;500;600;700;800;900&display=fallback');
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+/* Additional styles */
+@import 'additional-styles/utility-patterns.css';
+@import 'additional-styles/range-slider.css';
+@import 'additional-styles/toggle-switch.css';
+@import 'additional-styles/theme.css';
+
+@import 'tailwindcss/utilities';
+
+/* Additional Tailwind directives: https://tailwindcss.com/docs/functions-and-directives/#responsive */
+@layer utilities {
+    .rtl {
+        direction: rtl;
+    }
+}
+
+/* See Alpine.js: https://github.com/alpinejs/alpine#x-cloak */
+[x-cloak=""] {
+    display: none;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 20px;
+    width: 60%;
+    margin: 10px auto;
+  }
+  
+  .errorMsg {
+    max-width: 350px;
+    color: #f21e08;
+    padding: 2px 0;
+    margin-top: 2px;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  .form-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .form-control label {
+    width: 20%;
+    padding-right: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .form-control input[type="text"],
+  .form-control input[type="password"] {
+    width: 40%;
+    padding: 5px;
+  }
+  
+  button {
+    max-width: 150px;
+    padding: 5px 10px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    body {
+      width: 90%;
+    }
+  
+    .errorMsg {
+      max-width: 100%;
+    }
+  
+    .form-control {
+      flex-direction: column;
+    }
+  
+    .form-control input[type="text"],
+    .form-control input[type="password"] {
+      width: inherit;
+    }
+  }
+  
